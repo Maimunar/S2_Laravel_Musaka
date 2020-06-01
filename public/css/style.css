@@ -1,0 +1,608 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Berlin Sans FB', sans-serif;
+}
+
+body.home {
+    background: url("../../Content/images/homeBack.jpg")no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+footer {
+    background-color: #050D40;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    text-align: right;
+    font-size: 1vw;
+    padding-top: 1vw;
+    color: rgb(177, 176, 176);
+}
+
+.backgroundText {
+    max-width: 900px;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+}
+
+.backgroundText h1 {
+    font-size: 115px;
+    color: #F76E05;
+    margin-left: 2em;
+    text-indent: -2em;
+    text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-weight: bold;
+    margin: 5px;
+}
+
+a {
+    font-size: 14px;
+    margin: 15px 0;
+    color: #000;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #F76E05;
+    background-color: #F76E05;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+form {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+}
+input {
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    min-height: 480px;
+    margin-top: 10%;
+
+}
+#container{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+}
+.form-container {
+    position: absolute;
+    height: 100%;
+}
+
+.sign-in-container {
+    width: 50%;
+}
+
+.containerF {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    position: relative;
+    width: 550px;
+    max-width: 100%;
+    min-height: 350px;
+    margin-top: 10%;
+}
+
+.form-containerF {
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+#forgotten {
+    font-size: 20px;
+}
+
+#forgotten:hover {
+    background-color: #cacaca;
+    font-size: 21px;
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    height: 100%;
+    width: 54%;
+}
+
+.overlay-right {
+    right: 0;
+}
+
+nav{
+    background: #050D40;
+    height: 65px;
+    width: 100%;
+    font-family: Hobo Std;
+    position: sticky!important;
+    top: 0;
+    z-index: 2;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 65px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 5px;
+    padding: 0.1vw 0.7vw;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 6px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #6C78A8;
+}
+a.active,a:hover{
+    background: #F76E05;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 65px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 4vw;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #F76E05;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 5vw;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+/* Container around content */
+.dishpagecontainer {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    min-width: 200px;
+}
+
+/* The circles on the timeline */
+.dishpagecontainer::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.dishpagecontent {
+    padding: 5vw;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+h5{
+    padding-top: 100px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+}
+.dishpageintro p{
+    padding-left: 10vw;
+    font-size: 13px;
+}
+.dishpagephoto{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vw;
+    border-radius: 10%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+@media (max-width:750px){
+    #headerlogo{
+        width: 75px;
+        height: 75px;
+    }
+    .backgroundText h1{
+        font-size: 75px;
+    }
+    footer{
+        font-size: 2vw;
+        background-color: #050D40;
+    }
+    h5{
+        padding-top: 35px;
+    }
+    .dishpagephoto{
+        width:40vw;
+    }
+    .one_card{
+        width:175px;
+    }
+    .image_card{
+        width:150px;
+    }
+}
+
+#boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+}
+
+.cards  {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+
+.one_card {
+    width: 275px;
+    height: auto;
+    box-shadow: 0 14px 20px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.image_card {
+    width: 250px;
+}
+.image_card img{
+    width: 100%;
+    height: 100%;
+    display:block;
+    border-radius: 5px;
+}
+
+.content_card {
+    padding: 0 20px;
+}
+
+.content_card h4 {
+    font-size: 25px;
+    color: #000;
+}
+
+.content_card p {
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.buttons_card {
+    padding-bottom: 2%;
+}
+
+.buttons_card a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #F76E05;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+
+.reviewButton {
+    color: white;
+    background-color: #F76E05;
+    font-size: 30px;
+    padding: 6px 20px;
+    border-radius: 25px;
+    position: relative;
+    top: 5vw;
+    text-shadow: 2px 2px #6C78A8;
+}
+
+.reviewButton:hover{
+    color: white;
+    background-color: #F76E05;
+    transition: .5s;
+}
+
+textarea{
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    resize: none;
+}
+
+#commentSubmitBtn{
+    width: 150px;
+    height: 30px;
+    background-color: #F76E05;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+#reviewForm{
+    background: transparent;
+}
+
+.commentbox{
+    width: 50vw;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    position: relative;
+}
+
+#moreCommentsBtn{
+    width: 250px;
+    font-size: 17px;
+    padding: 7px;
+    margin-top: 40px;
+}
+.simpleText{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #F76E05;
+    font-size: 27px;
+    font-weight: bold;
+}
+.reviewSender{
+    font-size: 57px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 37px;
+    color: #F76E05;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin:5px 5px;
+    font-size: 14px;
+    width: 40px;
+}
+.editable {
+    position: relative;
+}
+
+.buttons_card a, .buttons_card input {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #F76E05!important;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+
+.recipeForm{
+    background-color: #f6f5f7;
+    padding: 0!important;
+}
+.ingredients{
+    font-size: 22px;
+}
+
+.upload-file {
+    padding: 0!important;
+    background-color: #F6F5F7!important;
+}
+
+.upload-button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #F76E05;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 13px;
+    width: 50%;
+    float: right!important;
+    margin-right: 10px;
+    margin-top: 15px!important;
+}
+
+.upload-input {
+    width: 40%;
+    float: left!important;
+    text-align: center;
+    display: inline-block;
+    background-color: #F6F5F7!important;
+    margin-left: 5px;
+}
+
+.upload-div {
+    width: 100%;
+}
