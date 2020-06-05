@@ -19,7 +19,7 @@
     <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
     </label>
-    <img  src="<?php echo asset('images/Logo.png')?>" alt="logo" id="headerlogo" height="150px" width="150px"></img>
+    <img  src="<?php echo asset('images/Logo2.png')?>" alt="logo" id="headerlogo" height="150px" width="150px"></img>
     <ul>
         <!-- For something to be active, you need to add class="active" to the yield -->
         <li><a @yield('homeActive') href="..">Home</a></li>

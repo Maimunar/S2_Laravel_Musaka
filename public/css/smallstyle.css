@@ -16,7 +16,7 @@ body {
 }
 
 body.home {
-    background: url("../../Content/images/homeBack.jpg")no-repeat center center fixed;
+    background: url("/images/homeBack.jpg")no-repeat center center fixed;
     background-size: cover;
 }
 
