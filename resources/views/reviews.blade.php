@@ -1,5 +1,5 @@
 @extends('master')
-
+@section('bodyBackground', 'class=home')
 @section('homeActive', 'class=active')
 
 @section('content')

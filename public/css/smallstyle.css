@@ -263,6 +263,7 @@ button:hover, a:hover {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
+    min-width: 70vw;
     max-width: 1200px;
     margin: 0 auto;
     padding-bottom: 10vw;
@@ -406,7 +407,7 @@ h5{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 80vh;
+    min-height: 80vh;
 }
 
 .cards  {
@@ -423,7 +424,7 @@ h5{
     box-shadow: 0 14px 20px rgba(0,0,0,0.25),
     0 10px 10px rgba(0,0,0,0.22);
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .image_card {

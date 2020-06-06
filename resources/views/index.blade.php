@@ -1,9 +1,9 @@
 @extends('master')
 
+@section('bodyBackground', 'class=home')
 @section('homeActive', 'class=active')
 
 @section('content')
-<!-- TODO - Fix background image -->
 
     <div class="backgroundText">
         <h1>Embrace your inner chef</h1>

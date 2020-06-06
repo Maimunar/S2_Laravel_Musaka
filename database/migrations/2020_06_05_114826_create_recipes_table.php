@@ -29,6 +29,7 @@ class CreateRecipesTable extends Migration
             $table->text('step8')->nullable();
             $table->text('step9')->nullable();
             $table->text('step10')->nullable();
+            $table->timestamps();
         });
     }
 

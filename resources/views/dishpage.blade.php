@@ -1,8 +1,8 @@
 @extends('master')
-
+<?php use \App\Http\Controllers\RecipesController; ?>
 @section('recipesActive', 'class=active')
 
 @section('content')
-    <p>This is where you put content and stuff</p>
+  <?php RecipesController::GenerateRecipePage($recipeId);?>
 
 @endsection

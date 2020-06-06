@@ -16,9 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@show');
 Route::get('/login', 'LoginController@show');
-//Dishpage will need to have a /recipeName when you finish DB
-Route::get('/dishpage', 'DishpageController@show');
+Route::get('/dishpage/{recipeId}', 'DishpageController@show');
+
 Route::get('/profile', 'ProfileController@show');
 Route::get('/recipes', 'RecipesController@show');
 Route::get('/reviews', 'ReviewsController@show');
 Route::get('/submitRecipe', 'SubmitRecipeController@show');
+Route::post('/submitRecipe/post', 'DishpageController@SubmitRecipe');
+//Redirect on wrong credentials/other
+Route::get('/tooMuchRecipeViews', 'RedirectController@tootooMuchRecipeViews');
+Route::get('/notLoggedIn', 'RedirectController@notLoggedIn');
+Route::get('/logout', 'RedirectController@logOut');

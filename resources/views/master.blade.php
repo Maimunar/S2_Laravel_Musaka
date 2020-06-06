@@ -8,12 +8,13 @@
     <link rel="stylesheet" media="(max-width: 640px)" href="<?php echo asset('css/smallstyle.css')?>">
     <link rel="stylesheet" media="(min-width: 640px)" href="<?php echo asset('css/style.css')?>">
     <title>Musaka - Bulgarian Recipes</title>
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--Script used from online to create the line icon when screen is small -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
-<body class="home">
+<!-- In order to give the body's background picture, add class="home" -->
+<body @yield('bodyBackground')>
 <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -23,22 +24,22 @@
     <ul>
         <!-- For something to be active, you need to add class="active" to the yield -->
         <li><a @yield('homeActive') href="..">Home</a></li>
-        <li><a @yield('recipesActive') href="recipes">Recipes</a></li>
+        <li><a @yield('recipesActive') href="../recipes">Recipes</a></li>
         <?php if (isset($_SESSION["username"])){
             echo ("<li><a ");
             ?> @yield('profileActive') <?php
-            echo("href=\"profile\">Profile</a> </li>");
+            echo("href=\"../profile\">Profile</a> </li>");
         } ?>
         <li>
             <?php if(isset($_SESSION["username"])){
                 echo ("<a ");
                 ?> @yield('loginActive') <?php
-                echo(" href=\"logout\">Logout</a>");
+                echo(" href=\"../logout\">Logout</a>");
             }
             else{
                 echo ("<a ");
                ?> @yield('loginActive') <?php
-                echo (" href=\"login\">Login</a>");
+                echo (" href=\"../login\">Login</a>");
             } ?>
         </li>
     </ul>
